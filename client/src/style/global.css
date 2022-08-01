@@ -78,7 +78,7 @@ table {
 }
 
 *{
-	font-family: 'Noto Sans CJK KR', sans-serif;
+	font-family: 'Noto Sans CJK KR', sans-serif !important;
 	font-size: 13px;
 	font-weight: 400;
 	text-shadow: none !important;
