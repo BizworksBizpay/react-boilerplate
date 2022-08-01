@@ -1,0 +1,211 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+@font-face {
+	font-family: Noto Sans CJK KR;
+	src: url(NotoSans/NotoSansKR-Black.woff) format('woff');
+	font-style: black;
+	font-weight: 900;
+}
+@font-face {
+	font-family: Noto Sans CJK KR;
+	src: url(NotoSans/NotoSansKR-Bold.woff) format('woff');
+	font-style: bold;
+	font-weight: 700;
+}
+@font-face {
+	font-family: Noto Sans CJK KR;
+	src: url(NotoSans/NotoSansKR-Medium.woff) format('woff');
+	font-weight: 500;
+	font-style: medium;
+}
+@font-face {
+	font-family: Noto Sans CJK KR;
+	src: url(NotoSans/NotoSansKR-Regular.woff) format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: Noto Sans CJK KR;
+	src: url(NotoSans/NotoSansKR-Light.woff) format('woff');
+	font-weight: 300;
+	font-style: light;
+}
+@font-face {
+	font-family: Noto Sans CJK KR;
+	src: url(NotoSans/NotoSansKR-Thin.woff) format('woff');
+	font-weight: 100;
+	font-style: thin;
+}
+
+*{
+	font-family: 'Noto Sans CJK KR', sans-serif;
+	font-size: 13px;
+	font-weight: 400;
+	text-shadow: none !important;
+	letter-spacing:-0.5px;
+	padding: 0;
+	margin: 0;
+}
+
+
+.flex{
+	display : flex;
+}
+.flex-direction-column {
+	flex-direction : column;
+}
+.flex-1{
+	flex : 1;
+}
+.flex-space-between{
+	justify-content: space-between;
+}
+.flex-space-around{
+	justify-content: space-around;
+}
+.w-100{
+	width : 100%;
+}
+.w-10{
+	width : 10%;
+}
+.h-100vh{
+	height : 100vh;
+}
+
+.wrap {
+	padding-bottom : 60px;
+	width : 100%;
+}
+.footer{
+	position : fixed;
+	bottom : 0;
+	width : 100%;
+	height : 60px;
+}
+.footer__item{
+	padding : 20px;
+	text-align: center;
+	background-color: var(--main-colorgray-200);
+	color : var(--main-colorgray-500);
+	border : 1px solid var(--main-colorgray-100);
+}
+.right__wrap{
+	margin-left : 260px;
+}
+.main__layout{
+	padding : 20px;
+	background-color: var(--main-colorgray);
+	min-height: calc(100vh - 180px); 
+}
+
+/*	margin	*/
+.mt-10{
+	margin-top : 10px;
+}
+
+/* table */
+.post_table{
+	border-collapse: collapse;
+}
+.post_table > tbody > tr > th{
+	padding : 4px 6px;
+	height : 24px;
+	color : var(--main-colorgray-500);
+	line-height: 24px;
+	border : 1px solid var(--main-colorgray-200);
+	background-color: var(--main-colorgray-100);
+	opacity : 1;
+	font-size : 13px;
+}
+.post_table > tbody > tr > td{
+	padding : 4px 6px;
+	height : 24px;
+	color : var(--main-colorgray-500);
+	line-height: 24px;
+	border : 1px solid var(--main-colorgray-200);
+	background-color: var(--color-white );
+	opacity : 1;
+	font-size : 13px;
+}
+.post_table > tbody > tr > td > select{
+	width : 100%;
+	border : 1px solid var(--main-colorgray-200);
+	padding : 4px 6px;
+}
+
+/* btn */
+.topbtn{
+	min-width: 80px;
+	padding : 6px 14px;
+	vertical-align: middle;
+	color : var(--main-colorgray-300);
+	border : 1px solid var(--main-colorgray-200);
+	background-color: var(--color-white);
+	margin-right: 10px;
+	border-radius: 4px;
+}
+
+/* define root */
+/* --main-colorgray-400 왼쪽 네비게이션 미가입 정상가입 상세검색, 검색구분 등*/
+/* --main-colorgray-500 왼쪽 네비게이션 코드 사업장명, 회원사 관리쪽 대분류 회원구분 회원가입상태 등 폰트색*/
+/* --main-colorgray-600 수정 저장 삭제 닫기 선택 안됬을때 버튼 폰트 색*/
+/* --main-colorblack-500 업체구분쪽 개인 법인 체크박스 라벨 글자 색 value값들의 폰트 색*/
+/* --nav-main-backgroundcolor-200 로고 백그라운드 서브메뉴 백그라운드*/
+:root{
+	--nav-main-backgroundcolor : #232c42;
+	--nav-main-backgroundcolor-200 : #28324A;
+	--main-colorgray : #ECEFF5;
+	--main-colorgray-100: #E2E6ED;
+	--main-colorgray-200 : #CAD2E0;
+	--main-colorgray-300 : #9ca2b0;
+	--main-colorgray-400 : #A0ACCB;
+	--main-colorgray-500 : #5A6581;
+	--main-colorgray-600 : #717D9B;
+	
+
+	--main-colorblack-500 : #232C42;
+	--main-background-color-blue : #498CEF;
+	--color-white : white;
+	
+}
