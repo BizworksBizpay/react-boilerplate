@@ -20,8 +20,8 @@ export const incrementAsync = createAsyncThunk(
 const memberReducer = createSlice({
     name:"member",
     initialState,
-    read:(state,action)=>{
-      console.log(incrementAsync);
+    reducers:{
+        
     },
     extraReducers: (builder) => {
     builder
@@ -31,10 +31,13 @@ const memberReducer = createSlice({
       .addCase(incrementAsync.fulfilled, (state, action) => {
         state.status = 'idle';
         state.value += action.payload;
-      });
+      })
+      .addCase(incrementAsync.rejected, (state)=>{
+        state.status = 'error';
+      })
   },
 })
-export const { read, reset } = memberReducer.actions;
+export const { reset } = memberReducer.actions;
 export default memberReducer.reducer;
 
 
