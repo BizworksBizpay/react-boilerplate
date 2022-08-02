@@ -3,6 +3,7 @@ import { Custombutton, Checkbox } from '../../component'
 import { useDispatch, useSelector } from 'react-redux';
 import { incrementAsync } from '../../reducers/memberReducer';
 import fetchData from '../../utils/fetchData';
+import Postcode from "../../utils/Postcode";
 const button_ary = [
   {
     key : 0,
@@ -30,12 +31,12 @@ const button_ary = [
   },
 ];
 
-//const resource = fetchData("https://jsonplaceholder.typicode.com/users");
+const resource = fetchData("https://jsonplaceholder.typicode.com/users");
 
 const MainContainer = () => {
 
   const dispatch = useDispatch();
-  //const nameList = resource.read();
+  const nameList = resource.read();
 
   const [check, setCheck] = useState(false);
   const {value,status} = useSelector(state=> state.member);
@@ -55,10 +56,11 @@ const MainContainer = () => {
   return (
     <div>
       {
-        button_ary.map(Item => (
-          <Custombutton className="topbtn" type="buton" onClick={()=>{console.log('custom button')}} key={Item.key}>{Item.button_text}</Custombutton>
+        button_ary.map( (Item,index) => (
+          <Custombutton className="topbtn" type="buton" onClick={()=>{console.log('custom button')}} key={index}>{Item.button_text}</Custombutton>
         ))
       }
+      <Postcode></Postcode>
       <div className="mt-10 w-100">
           <table className="w-100 post_table">
             <colgroup>
